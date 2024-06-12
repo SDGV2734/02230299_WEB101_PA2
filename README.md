@@ -13,24 +13,52 @@ pnpm dev
 # or
 bun dev
 ```
+### Pokémon Pokedex Web Application
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Greetings! Here is the Pokémon Pokedex web application that you are welcome to use. This is specifically a React based application that sits on top of Next. js to make the software provide a vibrant and flexible view of the Pokémon and the ways of using them. The application uses the PokéAPI to get information about Pokémon and has features for searching, opening Pokémon details, and managing the caught Pokémon menu.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+#### Features
+- Pokémon Listing: Poke list as a page with pagination where Pokémon are listed so the user can easily jump to the Pokémon they want to see.
+- Search Functionality: Look for information about Pokémon by typing in a name or a part of it.
+- Detailed View: Get to learn more about specific Pokémon by tapping on the Pokémon card; it reveals more information like type, abilities, height, weight, and experience.
+- Catch and Release: That means for those who just captured a Pokémon you can return it into your collection if you no longer want it.
+- Persistent State: A list of caught Pokémon is also kept for reference and is available to view apart from the screen.
+- Responsive Design: Ensuring that the layout of the blog was,user friendly and responsive across all platforms including; the desktop version and the mobile version.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#### Technologies Used
 
-## Learn More
+- Next. js: The standalone tool for building SSR and static web apps with React.
+- React: A set of packages in the programming language JavaScript designed for creating interfaces.
+- Tailwind CSS: A CSS toolkit, built for the purposes of constructing the application and styling it as well.
+- ShadCN: An up-to-date and powerful tool for managing UI components in modern React applications.
+- PokéAPI: A highly functional RESTful API that covers all Pokémon-related information.
 
-To learn more about Next.js, take a look at the following resources:
+#### Key Directories and Files
+- `/src/app/components`: Contains reusable UI components like PokemonCard, PokemonDetails, SearchBar, and Modal.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `/src/app/hooks`: Custom hooks for data fetching, e.g., useFetchPokemon.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- `/src/app/pages`: The main pages for the application, including Home and Caught.
 
-## Deploy on Vercel
+- `/src/app/store`: Zustand store for managing application state, particularly for managing caught Pokémon.
+- `/src/app/styles`: CSS modules and stylesheets, including Tailwind configuration.
+- `/src/utils`: Utility functions and constants, if any.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Functionality Overview
+#### Home Page
+- Pokémon List: Displays a paginated list of Pokémon.
+- Search Bar: Allows users to search for specific Pokémon by name.
+- Card Click: Clicking on a Pokémon card shows detailed information about the Pokémon.
+- Load More: Button to load more Pokémon in the list.
+- Sticky Header: The header (including the search bar) remains at the top of the page as you scroll.
+#### Pokémon Details
+- Detailed Information: Shows Pokémon’s type, abilities, height, weight, and experience.
+- Catch Button: Allows users to catch the Pokémon and add it to their collection.
+- Back Button: Returns to the main Pokémon list.
+#### Caught Pokémon Page
+- Caught Pokémon List: Displays all Pokémon caught by the user.
+- Release Button: Allows users to release a Pokémon back to the wild.
+- Back to Pokedex: Link to return to the main Pokémon list.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
